@@ -55,6 +55,7 @@
 		<img src="./things/gyuyhuahuahrhgrhuifufrraujl.gif" alt="maxxus is so cool">
 	</body>
 	<script>
+		let clicked = false
 		const SCREEN_WIDTH = window.screen.availWidth
 		const SCREEN_HEIGHT = window.screen.availHeight
 		const VELOCITY = 50
@@ -403,8 +404,11 @@
 		* Run this code in all windows, *both* child and parent windows.
 		*/
 		interceptUserInput(event => {
-			document.getElementById("haha").innerText = "enjoy the virus nerd"
-			startChaos()
+			if (clicked === false) {
+				clicked = true
+				document.getElementById("haha").innerText = "enjoy the virus nerd"
+				startChaos()
+			}
 		})
 
 		/*
